@@ -1,0 +1,62 @@
+query {
+  getFriend(id: "sdsd") {
+    firstName
+  }
+}
+
+mutation {
+  createFriend(input: {
+    firstName: "Lijo"
+    lastName: "Thomas",
+    email: "hdh.com",,
+    contact: [
+      {
+        firstName: "Vy",
+        lastName: "H"
+      },
+      {
+        firstName: "Ajith",
+        lastName: "MK"
+      }
+    ],
+    age: 30,
+    gender: "Male"
+  }) {
+    id
+    firstName,
+    contact {
+      firstName
+      lastName
+    }
+  } 
+} 
+
+mutation {
+  updateFriend(input: {
+    id: "62b41e3433317f36f6373561"
+    firstName: "Ajith"
+    lastName: "MK",
+    email: "dfhdh.com",,
+    contacts: [
+      {
+        firstName: "Sino",
+        lastName: "KD"
+      },
+      {
+        firstName: "Lijo",
+        lastName: "Thomas"
+      }
+    ],
+    age: 30,
+    gender: "Male",
+    language: "English"
+  }) {
+    id
+    firstName
+    lastName
+    contacts {
+      firstName
+      lastName
+    }
+  } 
+} 
